@@ -1,0 +1,15 @@
+git_grab https://github.com/twistedgitbox/TestforChanges.git
+
+git_grab https://github.com/puppetlabs/exercise-webpage.git WEB
+
+git_grab https://github.com/twistedgitbox/simple_nginx.git DOCKER
+
+git_grab https://github.com/pixelsign/html5-device-mockups.git WEB
+
+https://github.com/twistedgitbox/TestforChanges.git
+
+https://github.com/puppetlabs/exercise-webpage.git WEB
+
+https://github.com/twistedgitbox/simple_nginx.git DOCKER
+
+https://github.com/pixelsign/html5-device-mockups.git WEB
