@@ -92,25 +92,24 @@ check_replace_repo(){
 
     # Check if the repository folder exists, if not clone it. If so, do a git pull in the folder to assure newest commits are in the folders stored in the vagrant instance.
 
-    echo $url
     echo "Place in this directory --> $DIR"
     if [ ! -d $DIR ]; then
       git clone $url $DIR
     else
-      echo "Directory exists so do git pull to get latest commits"
+      # Directory exists so do git pull to get latest commits
       pushd $DIR
       if needs_stash; then
-        echo "Do git stash"
+        # Do git stash"
         git stash
-        echo "Do git pull"
+        # Do git pull
         git pull --quiet
         git stash pop
       else
-        echo "No stash needed, just git pull"
+        # No stash needed, just git pull"
         git init
         remote_addr=(git remote -v)
-        echo "Easier to reset remote address here"
-        git remote set-url origin $url
+        # Easier to reset remote address here
+        git remote set-url origin $url > /dev/null 2>&1
         git pull origin master --quiet
       fi
       echo "Finished with checks, files are placed or updated."
