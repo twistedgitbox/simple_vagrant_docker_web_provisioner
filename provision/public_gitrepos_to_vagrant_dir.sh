@@ -104,10 +104,8 @@ check_replace_repo(){
       pushd $DIR
       if needs_stash; then
         echo "Do git stash"
-#        git stash
         echo "Do git pull"
         git pull --quiet
-#        git stash pop
       else
         echo "No stash needed, just git pull"
         git init
